@@ -19,4 +19,17 @@
   ![image](https://github.com/truonghet/MyImageProcessing/assets/9692983/6a2c9215-1e68-48fd-abbf-b4f4348cd209)
 
 ### Endpoint:
-- http://localhost:8082/filteredimage?image_url=https://raw.githubusercontent.com/truonghet/MyImageProcessing/main/img.png?token=GHSAT0AAAAAACQIKWGJ6GTUR26NGQ65TUPUZQMBAIA
+- http://localhost:8082/filteredimage?image_url=https://raw.githubusercontent.com/truonghet/MyImageProcessing/main/img.png
+
+### Error handling
+- If image url is empty and invalid:
+  
+  ![image](https://github.com/truonghet/MyImageProcessing/assets/9692983/de0165ef-84bb-4f0a-a216-700f2557ada0)
+
+  ![image](https://github.com/truonghet/MyImageProcessing/assets/9692983/1dd3cfd5-9c84-4608-b5bc-c7569ee7abff)
+
+  ![image](https://github.com/truonghet/MyImageProcessing/assets/9692983/e25b2421-4a40-4b30-ab27-cc3d19381bc1)
+
+
+
+  
