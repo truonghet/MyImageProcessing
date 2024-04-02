@@ -11,18 +11,17 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   app.use(bodyParser.json());
 
   app.get( "/filteredimage", async(req:express.Request, res:express.Response) => {
-    let {image_url} = req.query;
+    const {image_url} = req.query;
     if (!image_url){
-      res.status(400).send('Error: The image url cannot be empty!');
+      res.status(400).send('The image url cannot be empty!');
     } else {
       await filterImageFromURL(image_url).then( function (image_filtered_path){
         res.sendFile(image_filtered_path, () => {       
           deleteLocalFiles([image_filtered_path]);       
         });   
       }).catch(function(err){
-        res.status(400).send('Error:' + err);
-      });  
-
+        res.status(400).send('Please make sure that the image url is valid.');
+      });
     }
   });
   

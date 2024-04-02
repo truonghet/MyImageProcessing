@@ -21,7 +21,7 @@ const util_1 = require("./util/util");
     app.get("/filteredimage", (req, res) => __awaiter(this, void 0, void 0, function* () {
         let { image_url } = req.query;
         if (!image_url) {
-            res.status(400).send('Error: The submitted url is empty');
+            res.status(400).send('Error: The image url cannot be empty!');
         }
         else {
             yield util_1.filterImageFromURL(image_url).then(function (image_filtered_path) {
@@ -29,7 +29,7 @@ const util_1 = require("./util/util");
                     util_1.deleteLocalFiles([image_filtered_path]);
                 });
             }).catch(function (err) {
-                res.status(400).send('Error:' + err + 'For some reason the image cannot be filtered. Please provide the following ID to our support:' + Math.random().toString(36).substr(2, 9));
+                res.status(400).send(err);
             });
         }
     }));
@@ -37,8 +37,8 @@ const util_1 = require("./util/util");
         res.send("try GET /filteredimage?image_url={{}}");
     }));
     app.listen(port, () => {
-        console.log(`server running http://localhost:${port}`);
-        console.log(`press CTRL+C to stop server`);
+        console.log(`Server running http://localhost:${port}`);
+        console.log(`Press CTRL + C to stop server`);
     });
 }))();
 //# sourceMappingURL=server.js.map
