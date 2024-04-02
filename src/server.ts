@@ -13,7 +13,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   app.get( "/filteredimage", async(req:express.Request, res:express.Response) => {
     let {image_url} = req.query;
     if (!image_url){
-      res.status(400).send('Error: The submitted url is empty');
+      res.status(400).send('Error: The image url cannot be empty!');
     } else {
       await filterImageFromURL(image_url).then( function (image_filtered_path){
         res.sendFile(image_filtered_path, () => {       
@@ -31,7 +31,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   } );
   
   app.listen( port, () => {
-      console.log( `server running http://localhost:${ port }` );
-      console.log( `press CTRL+C to stop server` );
+      console.log( `Server running http://localhost:${ port }` );
+      console.log( `Press CTRL + C to stop server` );
   } );
 })();
