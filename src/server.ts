@@ -20,7 +20,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
           deleteLocalFiles([image_filtered_path]);       
         });   
       }).catch(function(err){
-        res.status(400).send('Please make sure that the image url is valid.');
+        res.status(400).send('Please make sure that the image url is valid!');
       });
     }
   });
