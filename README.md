@@ -30,6 +30,17 @@
 
   ![image](https://github.com/truonghet/MyImageProcessing/assets/9692983/e25b2421-4a40-4b30-ab27-cc3d19381bc1)
 
+# Deploying applications to Elastic Beanstalk environments
+### Setup AWS CLI, EB CLI at your local machine
+- Open PowerShell and run `aws configure` to setup credential information of aws account
+- Open PowerShell and run `eb init`
+
+  ![image](https://github.com/truonghet/MyImageProcessing/assets/9692983/e96748fd-5ebe-4390-b10d-58589bda5efa)
+  ![image](https://github.com/truonghet/MyImageProcessing/assets/9692983/e05e0f1c-ea95-4387-8b67-84b88df7fd80)
+  ![image](https://github.com/truonghet/MyImageProcessing/assets/9692983/43fe3320-fae6-4ff3-87b0-acc4602c9b58)
 
 
-  
+
+
+
+- 
