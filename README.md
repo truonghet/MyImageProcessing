@@ -9,7 +9,7 @@
 - build project: `npm run build`
 - start project: `npm run dev`
 ### Image:
-- Image: https://raw.githubusercontent.com/truonghet/MyImageProcessing/main/img.png?token=GHSAT0AAAAAACQIKWGJ6GTUR26NGQ65TUPUZQMBAIA
+- Image: https://github.com/truonghet/MyImageProcessing/blob/main/img.png?raw=true
 - Before:
   
   ![image](https://github.com/truonghet/MyImageProcessing/assets/9692983/9f156746-dfdb-421a-ad3f-732a03d403cd)
@@ -19,7 +19,8 @@
   ![image](https://github.com/truonghet/MyImageProcessing/assets/9692983/6a2c9215-1e68-48fd-abbf-b4f4348cd209)
 
 ### Endpoint:
-- http://localhost:8082/filteredimage?image_url=https://raw.githubusercontent.com/truonghet/MyImageProcessing/main/img.png
+- Localhost: http://localhost:8082/filteredimage?image_url=https://github.com/truonghet/MyImageProcessing/blob/main/img.png?raw=true
+- Live http://my-image-processing-dev2.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://github.com/truonghet/MyImageProcessing/blob/main/img.png?raw=true
 
 ### Error handling
 - If image url is empty and invalid:
@@ -33,11 +34,18 @@
 # Deploying applications to Elastic Beanstalk environments
 ### Setup AWS CLI, EB CLI at your local machine
 - Open PowerShell and run `aws configure` to setup credential information of aws account
-- Open PowerShell and run `eb init`
+- Open PowerShell and run `eb init`, `eb create`
 
-  ![image](https://github.com/truonghet/MyImageProcessing/assets/9692983/e96748fd-5ebe-4390-b10d-58589bda5efa)
-  ![image](https://github.com/truonghet/MyImageProcessing/assets/9692983/e05e0f1c-ea95-4387-8b67-84b88df7fd80)
-  ![image](https://github.com/truonghet/MyImageProcessing/assets/9692983/43fe3320-fae6-4ff3-87b0-acc4602c9b58)
+![image](https://github.com/truonghet/MyImageProcessing/assets/9692983/d56dda65-6e97-40f6-bc2b-618a5249cdb2)
+![image](https://github.com/truonghet/MyImageProcessing/assets/9692983/30cef61a-1acb-4c8a-8805-175b83551c28)
+
+# Application on EB AWS
+
+![image](https://github.com/truonghet/MyImageProcessing/assets/9692983/d4db3d40-96b2-4b31-8d9f-9cb3a1852b98)
+
+![image](https://github.com/truonghet/MyImageProcessing/assets/9692983/089e6d20-c6a9-48da-858c-96b2a13f05e4)
+
+![image](https://github.com/truonghet/MyImageProcessing/assets/9692983/9f185634-d90d-4b61-ba5b-c254c73ba844)
 
 
 
