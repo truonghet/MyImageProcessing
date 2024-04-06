@@ -46,9 +46,3 @@
 ![image](https://github.com/truonghet/MyImageProcessing/assets/9692983/089e6d20-c6a9-48da-858c-96b2a13f05e4)
 
 ![image](https://github.com/truonghet/MyImageProcessing/assets/9692983/9f185634-d90d-4b61-ba5b-c254c73ba844)
-
-
-
-
-
-- 
