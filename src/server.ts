@@ -9,8 +9,25 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   const port = process.env.PORT || 8082;
   
   app.use(bodyParser.json());
+  
+// Middleware to check if the URL is valid
+async function validateImageUrl(req, res, next) {
+  const { imageUrl } = req.query;
 
-  app.get( "/filteredimage", async(req:express.Request, res:express.Response) => {
+  if (!imageUrl) {
+    return res.status(400).json({ error: 'Image URL is missing' });
+  }
+
+  try {
+    new URL(imageUrl);
+    next(); // Proceed to the next middleware
+  } catch (error) {
+    return res.status(400).json({ error: 'Invalid image URL' });
+  }
+}
+  
+
+  app.get( "/filteredimage", validateImageUrl, async(req:express.Request, res:express.Response) => {
     const {image_url} = req.query;
     if (!image_url){
       res.status(400).send('The image url cannot be empty!');
